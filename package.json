@@ -1,0 +1,32 @@
+{
+  "name": "job-helper",
+  "version": "1.0.0",
+  "description": "이직 도우미",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goodzzong/job-helper.git"
+  },
+  "author": "goodzzong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goodzzong/job-helper/issues"
+  },
+  "homepage": "https://github.com/goodzzong/job-helper#readme",
+  "dependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "helmet": "^3.21.1",
+    "morgan": "^1.9.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
