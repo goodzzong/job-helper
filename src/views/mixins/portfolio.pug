@@ -1,0 +1,6 @@
+mixin portfolio(item = {})
+	.portfolio
+		a(href=routes.detailPortFolio(item.id))
+			img.portfolio__thumbnail(src=item.imageFile)
+			h4.portfolio__title=item.title
+			h6.portfolio__views=item.views

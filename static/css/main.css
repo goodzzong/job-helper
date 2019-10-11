@@ -1,0 +1,21 @@
+* {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+main {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.field {
+	margin: 10px 0;
+}
+
+.field input,
+.field textarea {
+	width: 100%;
+}

@@ -3,7 +3,7 @@ import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
 import path from 'path';
-import { localsMiddleware } from './src/middlewares/localsMiddlewares';
+import { localsMiddleware } from './src/middlewares/middlewares';
 import routes from './src/routes/routes';
 import globalRouter from './src/routes/globalRouter';
 import portFolioRouter from './src/routes/portFolioRouter';
@@ -12,6 +12,8 @@ const app = express();
 
 app.set('views', path.join(__dirname, '/src/views'));
 app.set('view engine', 'pug');
+app.use('/static', express.static('static'));
+app.use('/uploads', express.static('uploads'));
 
 app.use(helmet());
 app.use(morgan('dev'));

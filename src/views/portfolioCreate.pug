@@ -1,4 +1,14 @@
 extends layouts/main
 
 block content
-	p portFolio Create
+	form(action=routes.postCreate,method="post",enctype="multipart/form-data")
+		.filed
+			input(type="text",name="title",placeholder="제목")
+		.field
+			textarea(name="description", cols="30", rows="10",placeholder="설명")
+		.field
+			input(type="file",name="portfolioImageFile")
+		.field
+			input(type="text",name="portfolioUrl",placeholder="포트폴리오 링크")
+		.field
+			input(type="submit",value="등록")

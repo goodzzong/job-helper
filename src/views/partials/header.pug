@@ -1,0 +1,22 @@
+header.header
+	.header__column
+		a(href=routes.home)
+			i.fas.fa-address-card
+	.header__column
+		form(action='', method="get")
+			input(type="text", placeHolder="Search by ...", name="search")
+	.header__column
+		ul
+			if !user.isAuthenticated
+				li
+					a(href='') Join
+				li
+					a(href='') Log In
+			else 
+				li
+					a(href=`/portfolios${routes.createPortFolio}`) Create
+				li
+					a(href='') Profile
+				li
+					a(href='') Logout
+	
