@@ -10,10 +10,10 @@ import portFolioRouter from './src/routes/portFolioRouter';
 
 const app = express();
 
-app.set('views', path.join(__dirname, '/src/views'));
+app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'pug');
-app.use('/static', express.static('static'));
-app.use('/uploads', express.static('uploads'));
+app.use('/static', express.static(path.join(__dirname, 'src/static')));
+app.use('/uploads', express.static(path.join(__dirname, 'src/uploads')));
 
 app.use(helmet());
 app.use(morgan('dev'));

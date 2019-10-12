@@ -4,8 +4,9 @@
   "description": "이직 도우미",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node init.js --delay 2"
+    "dev:server": "nodemon --exec babel-node init.js --delay 2",
+    "dev:assets": "WEBPACK_ENV=development webpack -w",
+    "build:assets": "WEBPACK_ENV=production webpack"
   },
   "repository": {
     "type": "git",
@@ -20,15 +21,27 @@
   "dependencies": {
     "@babel/core": "^7.6.2",
     "@babel/node": "^7.6.2",
+    "@babel/polyfill": "^7.6.0",
     "@babel/preset-env": "^7.6.2",
+    "autoprefixer": "^9.6.4",
+    "babel-loader": "^8.0.6",
     "cookie-parser": "^1.4.4",
+    "css-loader": "^3.2.0",
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "helmet": "^3.21.1",
     "morgan": "^1.9.1",
     "multer": "^1.4.2",
-    "pug": "^2.0.4"
+    "node-sass": "^4.12.0",
+    "open-color": "^1.7.0",
+    "postcss-loader": "^3.0.0",
+    "pug": "^2.0.4",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9"
   },
   "devDependencies": {
+    "mini-css-extract-plugin": "^0.8.0",
     "nodemon": "^1.19.2"
   }
 }

@@ -1,7 +1,7 @@
 import multer from 'multer';
 import routes from "../routes/routes";
 
-const multerPortfolio = multer({ dest: 'uploads/portfolio/' });
+const multerPortfolio = multer({ dest: 'src/uploads/portfolio/' });
 
 export const localsMiddleware = (req, res, next) => {
 	res.locals.siteName = "Job Helper";
@@ -10,6 +10,7 @@ export const localsMiddleware = (req, res, next) => {
 		isAuthenticated: true,
 		id: 1
 	}
+
 	next();
 }
 
