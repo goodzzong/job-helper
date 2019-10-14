@@ -222,15 +222,19 @@ input[type="submit"] {
   cursor: pointer; }
 
 .header {
-  background-color: #22b8cf;
+  background: -webkit-gradient(linear, right top, left top, from(#c5f6fa), to(#15aabf));
+  background: -webkit-linear-gradient(right, #c5f6fa, #15aabf);
+  background: -moz-linear-gradient(right, #c5f6fa, #15aabf);
+  background: -o-linear-gradient(right, #c5f6fa, #15aabf);
+  background: linear-gradient(to left, #c5f6fa, #15aabf);
   margin-bottom: 50px; }
   .header .header__wrapper {
-    padding: 5px 0px;
+    padding: 10px 0px;
     width: 100%;
     margin: 0 auto;
     max-width: 1200px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 3% 52% 45%;
     -webkit-box-align: center;
     -webkit-align-items: center;
        -moz-box-align: center;
@@ -241,7 +245,11 @@ input[type="submit"] {
       font-size: 30px; }
     .header .header__wrapper .header__column:nth-child(2) {
       width: 100%;
-      justify-self: center; }
+      -webkit-box-pack: left;
+      -webkit-justify-content: left;
+         -moz-box-pack: left;
+          -ms-flex-pack: left;
+              justify-content: left; }
     .header .header__wrapper .header__column ul {
       display: -webkit-box;
       display: -webkit-flex;
@@ -253,4 +261,90 @@ input[type="submit"] {
       text-transform: uppercase; }
       .header .header__wrapper .header__column ul li:not(:last-child) {
         margin-right: 15px; }
+
+.footer {
+  margin: 50px 0;
+  padding-top: 50px;
+  border-top: 3px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .footer .footer__icon {
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 40px;
+    margin-bottom: 20px; }
+  .footer .footer__text {
+    color: rgba(0, 0, 0, 0.2);
+    font-weight: 800;
+    text-transform: uppercase; }
+
+.portfolio {
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.125), 0 10px 10px rgba(0, 0, 0, 0.11);
+     -moz-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.125), 0 10px 10px rgba(0, 0, 0, 0.11);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.125), 0 10px 10px rgba(0, 0, 0, 0.11);
+  -webkit-border-top-left-radius: 4px;
+     -moz-border-radius-topleft: 4px;
+          border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+     -moz-border-radius-topright: 4px;
+          border-top-right-radius: 4px; }
+  .portfolio img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    -webkit-border-top-left-radius: 4px;
+       -moz-border-radius-topleft: 4px;
+            border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+       -moz-border-radius-topright: 4px;
+            border-top-right-radius: 4px; }
+  .portfolio .portfolio__info {
+    padding: 10px; }
+    .portfolio .portfolio__info .portfolio__title {
+      display: block;
+      font-size: 1.25rem;
+      line-height: 2rem;
+      max-height: 4rem;
+      font-weight: 600;
+      overflow: hidden;
+      margin-bottom: 10px; }
+    .portfolio .portfolio__info .portfolio__views {
+      font-size: .875rem;
+      margin-top: .5rem;
+      color: #8aa6c1; }
+
+.main-title {
+  display: block;
+  font-size: 1.5em;
+  -webkit-margin-before: 0.83em;
+          margin-block-start: 0.83em;
+  -webkit-margin-after: 0.83em;
+          margin-block-end: 0.83em;
+  -webkit-margin-start: 0px;
+     -moz-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+     -moz-margin-end: 0px;
+          margin-inline-end: 0px;
+  margin-bottom: 20px;
+  font-weight: bold; }
+
+.portfolio-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(370px, 1fr));
+  grid-gap: 30px; }
 
