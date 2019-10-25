@@ -1,0 +1,32 @@
+.header {
+	background: linear-gradient( to left, $oc-cyan-1, $oc-cyan-6 );
+	margin-bottom: 50px;
+	.header__wrapper {
+		padding: 10px 0px;
+		width: 100%;
+		margin: 0 auto;
+		max-width: 1200px;
+		display: grid;
+		grid-template-columns: 3% 52% 45%;
+		align-items: center;
+		.header__column {
+			i {
+				color: white;
+				font-size: 30px;
+			}
+			&:nth-child(2) {
+				width: 100%;
+				justify-content: left;
+			}
+			ul {
+				display: flex;
+				color: white;
+				font-weight: 600;
+				text-transform: uppercase;
+				li:not(:last-child) {
+          margin-right: 15px;
+        }
+			}
+		}
+	}	
+}

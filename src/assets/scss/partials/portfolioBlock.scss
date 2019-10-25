@@ -1,0 +1,31 @@
+.portfolio {
+	@include material-shadow(4, 0.5);
+	border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+	img {
+		max-width: 100%;
+		margin-bottom: 10px;
+		border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+	}
+	.portfolio__info {
+		padding: 10px;
+		.portfolio__title {
+			display: block;
+			font-size: 1.25rem;
+			line-height: 2rem;
+			max-height: 4rem;
+			font-weight: 600;
+			overflow: hidden;
+			margin-bottom: 10px;
+		}
+		.portfolio__views {
+			font-size: .875rem;
+			margin-top: .5rem;
+			color: #8aa6c1;
+		}
+
+	}
+
+
+}
